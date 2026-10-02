@@ -1,0 +1,11 @@
+Quintile,Concentration_Range,SmogNet_MAE,SmogNet_MAPE,Abs_Error_Share_Pct,Description
+"Q1 (15.7–39.5 µg/m³)
+Summer Baseline",15.7-39.5,14.65,48.86,12.0,High raw MAPE due to tiny denominators; accounts for only 12% of error.
+"Q2 (39.7–58.2 µg/m³)
+Moderate Air",39.7-58.2,10.23,20.67,8.3,Lowest absolute error of all regimes.
+"Q3 (58.3–96.3 µg/m³)
+Transitional",58.3-96.3,20.91,26.5,17.1,Autumn transition period.
+"Q4 (97.0–151.4 µg/m³)
+Severe Pre-Smog",97.0-151.4,24.44,20.57,19.9,Early crop stubble burning accumulation.
+"Q5 (154.1–582.3 µg/m³)
+Hazardous Winter Inversion",154.1-582.3,52.33,19.73,42.7,42.7% of all absolute errors concentrate in winter shock days (MAPE is low 19.7%).

@@ -1,0 +1,4 @@
+Horizon,Days,Persistence_RMSE,Persistence_R2,XGBoost_RMSE,XGBoost_R2,SmogNet_RMSE,SmogNet_R2,SmogNet_MAE,SmogNet_sMAPE,Outcome
+t+1 (Next-Day),1,41.02,0.7408,44.53,0.7049,43.34,0.7212,26.58,23.91,Persistence wins (Autocorrelation r ≈ 0.86 dominates)
+t+3 (3 Days Ahead),3,61.74,0.4098,55.1,0.5401,59.76,0.4631,39.18,34.24,Smog Net outperforms Persistence by +1.98 µg/m³
+t+7 (7 Days Ahead),7,72.93,0.1813,57.63,0.4812,58.09,0.4957,38.28,33.82,Smog Net outperforms Persistence by +14.84 µg/m³

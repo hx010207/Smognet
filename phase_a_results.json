@@ -1,0 +1,559 @@
+{
+  "item_1_shap": {
+    "mean_abs_shap_stubble_log": 0.0038,
+    "counterfactual_delta_pm25_ug_m3": 11.53,
+    "calm_wind_high_humidity_escalation_ug_m3": -0.13,
+    "sha256_hashes": {
+      "shap_values_csv": "63ba87a9a667bf702333fe6826f03878130ad846340f96720e1331f940641d43",
+      "shap_summary_png": "4745aaef11a565124224cea48d4daf11785179352468e09a3fa8266cbc6c90ef",
+      "shap_interactions_png": "537934ad29013c4f46f2fe888a1e0335345794d5af089150968113d783defadd",
+      "feature_importance_csv": "d115b56f07ecea38ea98f0dad14ae90f6e5f18c67134ebcc3e445f380a637f1c"
+    }
+  },
+  "item_2_fixed_test_ablation": {
+    "Persistence": {
+      "raw_target": {
+        "overall": {
+          "MAE": 27.02,
+          "RMSE": 45.59,
+          "R2": 0.7266,
+          "MAPE": 28.08,
+          "sMAPE": 25.86
+        },
+        "winter": {
+          "MAE": 41.14,
+          "RMSE": 62.04,
+          "R2": 0.5347,
+          "MAPE": 27.95,
+          "sMAPE": 25.43
+        },
+        "non_winter": {
+          "MAE": 12.61,
+          "RMSE": 16.49,
+          "R2": 0.2427,
+          "MAPE": 28.21,
+          "sMAPE": 26.3
+        }
+      },
+      "log_target": {
+        "overall": {
+          "MAE": 27.02,
+          "RMSE": 45.59,
+          "R2": 0.7266,
+          "MAPE": 28.08,
+          "sMAPE": 25.86
+        },
+        "winter": {
+          "MAE": 41.14,
+          "RMSE": 62.04,
+          "R2": 0.5347,
+          "MAPE": 27.95,
+          "sMAPE": 25.43
+        },
+        "non_winter": {
+          "MAE": 12.61,
+          "RMSE": 16.49,
+          "R2": 0.2427,
+          "MAPE": 28.21,
+          "sMAPE": 26.3
+        }
+      }
+    },
+    "LinearRegression": {
+      "raw_target": {
+        "overall": {
+          "MAE": 25.56,
+          "RMSE": 40.85,
+          "R2": 0.7805,
+          "MAPE": 30.2,
+          "sMAPE": 25.74
+        },
+        "winter": {
+          "MAE": 35.91,
+          "RMSE": 54.39,
+          "R2": 0.6424,
+          "MAPE": 24.67,
+          "sMAPE": 22.14
+        },
+        "non_winter": {
+          "MAE": 15.0,
+          "RMSE": 18.8,
+          "R2": 0.0154,
+          "MAPE": 35.84,
+          "sMAPE": 29.41
+        }
+      },
+      "log_target": {
+        "overall": {
+          "MAE": 30.17,
+          "RMSE": 47.3,
+          "R2": 0.7057,
+          "MAPE": 38.71,
+          "sMAPE": 30.9
+        },
+        "winter": {
+          "MAE": 39.62,
+          "RMSE": 62.04,
+          "R2": 0.5347,
+          "MAPE": 24.3,
+          "sMAPE": 23.97
+        },
+        "non_winter": {
+          "MAE": 20.53,
+          "RMSE": 24.34,
+          "R2": -0.6508,
+          "MAPE": 53.41,
+          "sMAPE": 37.97
+        }
+      }
+    },
+    "RandomForest": {
+      "raw_target": {
+        "overall": {
+          "MAE": 27.15,
+          "RMSE": 44.48,
+          "R2": 0.7397,
+          "MAPE": 31.45,
+          "sMAPE": 25.77
+        },
+        "winter": {
+          "MAE": 40.02,
+          "RMSE": 60.13,
+          "R2": 0.563,
+          "MAPE": 28.52,
+          "sMAPE": 24.0
+        },
+        "non_winter": {
+          "MAE": 14.03,
+          "RMSE": 17.58,
+          "R2": 0.1385,
+          "MAPE": 34.45,
+          "sMAPE": 27.56
+        }
+      },
+      "log_target": {
+        "overall": {
+          "MAE": 26.52,
+          "RMSE": 43.27,
+          "R2": 0.7537,
+          "MAPE": 28.52,
+          "sMAPE": 24.84
+        },
+        "winter": {
+          "MAE": 40.2,
+          "RMSE": 58.82,
+          "R2": 0.5818,
+          "MAPE": 26.71,
+          "sMAPE": 24.2
+        },
+        "non_winter": {
+          "MAE": 12.56,
+          "RMSE": 15.88,
+          "R2": 0.2977,
+          "MAPE": 30.37,
+          "sMAPE": 25.49
+        }
+      }
+    },
+    "GradientBoosting": {
+      "raw_target": {
+        "overall": {
+          "MAE": 26.49,
+          "RMSE": 41.57,
+          "R2": 0.7727,
+          "MAPE": 33.47,
+          "sMAPE": 26.83
+        },
+        "winter": {
+          "MAE": 37.05,
+          "RMSE": 55.4,
+          "R2": 0.6291,
+          "MAPE": 26.14,
+          "sMAPE": 22.65
+        },
+        "non_winter": {
+          "MAE": 15.73,
+          "RMSE": 18.97,
+          "R2": -0.0028,
+          "MAPE": 40.94,
+          "sMAPE": 31.09
+        }
+      },
+      "log_target": {
+        "overall": {
+          "MAE": 25.48,
+          "RMSE": 40.81,
+          "R2": 0.7809,
+          "MAPE": 27.96,
+          "sMAPE": 24.63
+        },
+        "winter": {
+          "MAE": 37.66,
+          "RMSE": 55.06,
+          "R2": 0.6336,
+          "MAPE": 24.22,
+          "sMAPE": 22.92
+        },
+        "non_winter": {
+          "MAE": 13.05,
+          "RMSE": 16.52,
+          "R2": 0.2399,
+          "MAPE": 31.78,
+          "sMAPE": 26.37
+        }
+      }
+    },
+    "XGBoost": {
+      "raw_target": {
+        "overall": {
+          "MAE": 27.56,
+          "RMSE": 42.29,
+          "R2": 0.7648,
+          "MAPE": 34.39,
+          "sMAPE": 27.44
+        },
+        "winter": {
+          "MAE": 38.97,
+          "RMSE": 56.33,
+          "R2": 0.6165,
+          "MAPE": 27.57,
+          "sMAPE": 23.74
+        },
+        "non_winter": {
+          "MAE": 15.92,
+          "RMSE": 19.39,
+          "R2": -0.0476,
+          "MAPE": 41.34,
+          "sMAPE": 31.22
+        }
+      },
+      "log_target": {
+        "overall": {
+          "MAE": 26.09,
+          "RMSE": 40.47,
+          "R2": 0.7846,
+          "MAPE": 29.99,
+          "sMAPE": 25.56
+        },
+        "winter": {
+          "MAE": 38.06,
+          "RMSE": 54.4,
+          "R2": 0.6424,
+          "MAPE": 24.79,
+          "sMAPE": 23.1
+        },
+        "non_winter": {
+          "MAE": 13.89,
+          "RMSE": 17.02,
+          "R2": 0.1925,
+          "MAPE": 35.29,
+          "sMAPE": 28.07
+        }
+      }
+    },
+    "TabularMLP": {
+      "raw_target": {
+        "overall": {
+          "MAE": 80.02,
+          "RMSE": 118.09,
+          "R2": -0.8345,
+          "MAPE": 59.15,
+          "sMAPE": 92.31
+        },
+        "winter": {
+          "MAE": 136.05,
+          "RMSE": 163.66,
+          "R2": -2.2374,
+          "MAPE": 77.74,
+          "sMAPE": 130.71
+        },
+        "non_winter": {
+          "MAE": 22.86,
+          "RMSE": 29.11,
+          "R2": -1.361,
+          "MAPE": 40.19,
+          "sMAPE": 53.15
+        }
+      },
+      "log_target": {
+        "overall": {
+          "MAE": 28.28,
+          "RMSE": 42.28,
+          "R2": 0.7649,
+          "MAPE": 37.07,
+          "sMAPE": 29.11
+        },
+        "winter": {
+          "MAE": 37.72,
+          "RMSE": 55.21,
+          "R2": 0.6315,
+          "MAPE": 25.92,
+          "sMAPE": 23.18
+        },
+        "non_winter": {
+          "MAE": 18.64,
+          "RMSE": 22.38,
+          "R2": -0.396,
+          "MAPE": 48.46,
+          "sMAPE": 35.16
+        }
+      }
+    },
+    "SequenceLSTM": {
+      "raw_target": {
+        "overall": {
+          "MAE": 38.46,
+          "RMSE": 58.2,
+          "R2": 0.5544,
+          "MAPE": 48.82,
+          "sMAPE": 37.12
+        },
+        "winter": {
+          "MAE": 52.5,
+          "RMSE": 77.08,
+          "R2": 0.2818,
+          "MAPE": 34.14,
+          "sMAPE": 31.06
+        },
+        "non_winter": {
+          "MAE": 24.13,
+          "RMSE": 27.95,
+          "R2": -1.1772,
+          "MAPE": 63.8,
+          "sMAPE": 43.3
+        }
+      },
+      "log_target": {
+        "overall": {
+          "MAE": 27.75,
+          "RMSE": 43.99,
+          "R2": 0.7454,
+          "MAPE": 31.21,
+          "sMAPE": 27.1
+        },
+        "winter": {
+          "MAE": 40.45,
+          "RMSE": 59.14,
+          "R2": 0.5772,
+          "MAPE": 24.77,
+          "sMAPE": 24.34
+        },
+        "non_winter": {
+          "MAE": 14.79,
+          "RMSE": 18.46,
+          "R2": 0.0504,
+          "MAPE": 37.78,
+          "sMAPE": 29.92
+        }
+      }
+    },
+    "SmogNet": {
+      "raw_target": {
+        "overall": {
+          "MAE": 25.65,
+          "RMSE": 42.52,
+          "R2": 0.7621,
+          "MAPE": 29.07,
+          "sMAPE": 24.53
+        },
+        "winter": {
+          "MAE": 38.24,
+          "RMSE": 57.62,
+          "R2": 0.5987,
+          "MAPE": 27.66,
+          "sMAPE": 23.25
+        },
+        "non_winter": {
+          "MAE": 12.8,
+          "RMSE": 16.29,
+          "R2": 0.2603,
+          "MAPE": 30.5,
+          "sMAPE": 25.84
+        }
+      },
+      "log_target": {
+        "overall": {
+          "MAE": 24.6,
+          "RMSE": 39.5,
+          "R2": 0.7948,
+          "MAPE": 27.35,
+          "sMAPE": 23.87
+        },
+        "winter": {
+          "MAE": 36.65,
+          "RMSE": 53.39,
+          "R2": 0.6554,
+          "MAPE": 24.65,
+          "sMAPE": 22.52
+        },
+        "non_winter": {
+          "MAE": 12.3,
+          "RMSE": 15.6,
+          "R2": 0.3222,
+          "MAPE": 30.11,
+          "sMAPE": 25.25
+        }
+      }
+    }
+  },
+  "item_3_linear_regression_blowup": {
+    "worst_day": "2016-11-07 00:00:00",
+    "actual_pm25": 488.57000732421875,
+    "predicted_pm25": 3496.298828125,
+    "features_exceeding_distribution": [
+      {
+        "feature": "is_stubble_burning",
+        "coef": 0.0959,
+        "z_score_2016": 3.37,
+        "log_contrib": 0.32350000739097595,
+        "raw_val_2016": 1.0,
+        "train_range_2015": "[0.0, 1.0]"
+      },
+      {
+        "feature": "pm25_lag1",
+        "coef": 0.0853,
+        "z_score_2016": 12.61,
+        "log_contrib": 1.0758999586105347,
+        "raw_val_2016": 685.36,
+        "train_range_2015": "[22.8, 293.5]"
+      },
+      {
+        "feature": "pm25_lag2",
+        "coef": 0.0139,
+        "z_score_2016": 10.47,
+        "log_contrib": 0.14499999582767487,
+        "raw_val_2016": 588.39,
+        "train_range_2015": "[22.8, 293.5]"
+      },
+      {
+        "feature": "pm25_lag3",
+        "coef": 0.0405,
+        "z_score_2016": 5.17,
+        "log_contrib": 0.20960000157356262,
+        "raw_val_2016": 342.45,
+        "train_range_2015": "[22.8, 293.5]"
+      },
+      {
+        "feature": "pm25_lag7",
+        "coef": 0.065,
+        "z_score_2016": 7.47,
+        "log_contrib": 0.48559999465942383,
+        "raw_val_2016": 434.92,
+        "train_range_2015": "[22.8, 246.0]"
+      },
+      {
+        "feature": "pm10_lag1",
+        "coef": 0.0045,
+        "z_score_2016": 5.91,
+        "log_contrib": 0.026499999687075615,
+        "raw_val_2016": 708.8,
+        "train_range_2015": "[34.2, 497.4]"
+      },
+      {
+        "feature": "pm10_lag3",
+        "coef": 0.0257,
+        "z_score_2016": 3.17,
+        "log_contrib": 0.08139999955892563,
+        "raw_val_2016": 475.1,
+        "train_range_2015": "[34.2, 497.4]"
+      },
+      {
+        "feature": "no2_lag1",
+        "coef": 0.024,
+        "z_score_2016": 5.03,
+        "log_contrib": 0.12039999663829803,
+        "raw_val_2016": 128.15,
+        "train_range_2015": "[13.4, 109.3]"
+      },
+      {
+        "feature": "no2_lag3",
+        "coef": 0.0127,
+        "z_score_2016": 5.28,
+        "log_contrib": 0.06689999997615814,
+        "raw_val_2016": 131.92,
+        "train_range_2015": "[13.4, 109.3]"
+      },
+      {
+        "feature": "pm25_roll3_mean",
+        "coef": 0.0501,
+        "z_score_2016": 10.12,
+        "log_contrib": 0.5069000124931335,
+        "raw_val_2016": 538.73,
+        "train_range_2015": "[25.5, 256.9]"
+      },
+      {
+        "feature": "pm25_roll3_std",
+        "coef": 0.0358,
+        "z_score_2016": 12.56,
+        "log_contrib": 0.45010000467300415,
+        "raw_val_2016": 176.77,
+        "train_range_2015": "[1.2, 89.9]"
+      },
+      {
+        "feature": "pm25_roll7_mean",
+        "coef": -0.0143,
+        "z_score_2016": 9.89,
+        "log_contrib": -0.1412999927997589,
+        "raw_val_2016": 495.15,
+        "train_range_2015": "[30.2, 229.9]"
+      },
+      {
+        "feature": "pm25_roll7_std",
+        "coef": -0.0709,
+        "z_score_2016": 8.51,
+        "log_contrib": -0.6028000116348267,
+        "raw_val_2016": 118.27,
+        "train_range_2015": "[5.4, 79.4]"
+      },
+      {
+        "feature": "gurugram_pm25_lag1",
+        "coef": 0.0853,
+        "z_score_2016": 11.12,
+        "log_contrib": 0.9491000175476074,
+        "raw_val_2016": 616.19,
+        "train_range_2015": "[22.8, 293.5]"
+      },
+      {
+        "feature": "gurugram_pm10_lag1",
+        "coef": 0.0045,
+        "z_score_2016": 5.91,
+        "log_contrib": 0.026499999687075615,
+        "raw_val_2016": 708.8,
+        "train_range_2015": "[34.2, 497.4]"
+      },
+      {
+        "feature": "spatial_grad_pm25",
+        "coef": 0.0,
+        "z_score_2016": -69.17,
+        "log_contrib": -0.0,
+        "raw_val_2016": -69.17,
+        "train_range_2015": "[0.0, 0.0]"
+      },
+      {
+        "feature": "spatial_grad_no2",
+        "coef": 0.0,
+        "z_score_2016": -118.06,
+        "log_contrib": -0.0,
+        "raw_val_2016": -118.06,
+        "train_range_2015": "[0.0, 0.0]"
+      },
+      {
+        "feature": "stubble_x_windspeed",
+        "coef": -0.1146,
+        "z_score_2016": 4.51,
+        "log_contrib": -0.516700029373169,
+        "raw_val_2016": 2.77,
+        "train_range_2015": "[0.0, 3.2]"
+      },
+      {
+        "feature": "upwind_stubble_transport",
+        "coef": 0.0612,
+        "z_score_2016": 5.55,
+        "log_contrib": 0.33970001339912415,
+        "raw_val_2016": 2.76,
+        "train_range_2015": "[0.0, 3.2]"
+      }
+    ],
+    "methodological_finding": "LinearRegression fits an unbounded linear hyperplane. When trained on only 1 year (2015, max PM2.5 = 293.5 \u00b5g/m\u00b3) and evaluated on the historic Nov 2016 Great Smog (PM2.5 = 685.4 \u00b5g/m\u00b3, +12.6 std dev), lag features compound positively, predicting an exponentiated 3,496.3 \u00b5g/m\u00b3. Tree models (XGBoost, RF, GBR) clip to leaf ranges, remaining immune to this extrapolation blowup."
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "firms_api_query_metadata": {
+    "api_endpoint": "https://firms.modaps.eosdis.nasa.gov/api/area/csv/[MAP_KEY]/MODIS_SP/73.8,27.5,77.6,32.5/5/[DATE]",
+    "source_instrument": "MODIS Standard Processing (MODIS_SP on Terra and Aqua)",
+    "bounding_box_coordinates": "73.8\u00b0E, 27.5\u00b0N, 77.6\u00b0E, 32.5\u00b0N (Punjab & Haryana)",
+    "day_range_per_request": 5,
+    "date_range": "2015-01-01 to 2020-07-01",
+    "is_synthetic": false
+  },
+  "model_comparison": {
+    "Model_A_Calendar_Only": {
+      "MAE": 25.14,
+      "RMSE": 39.64,
+      "R2": 0.7927,
+      "MAPE": 28.46,
+      "sMAPE": 24.58
+    },
+    "Model_B_Satellite_FIRMS_Only": {
+      "MAE": 24.61,
+      "RMSE": 39.81,
+      "R2": 0.7909,
+      "MAPE": 27.96,
+      "sMAPE": 24.19
+    },
+    "Model_C_Combined_Calendar_And_Satellite": {
+      "MAE": 24.75,
+      "RMSE": 39.13,
+      "R2": 0.798,
+      "MAPE": 28.54,
+      "sMAPE": 24.55
+    }
+  },
+  "shap_and_counterfactual": {
+    "satellite_informed_counterfactual_delta_pm25_ug_m3": 17.8,
+    "baseline_zero_fire_pred_ug_m3": 80.37,
+    "peak_satellite_fire_pred_ug_m3": 98.16,
+    "peak_fire_radiative_power_mw": 16724.2,
+    "peak_fire_pixel_count": 1112.8,
+    "firms_transport_index_mean_abs_shap_log": 0.0081,
+    "firms_log_frp_lag1_mean_abs_shap_log": 0.0215,
+    "is_stubble_burning_mean_abs_shap_log": 0.0013
+  }
+}

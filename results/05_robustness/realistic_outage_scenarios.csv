@@ -1,0 +1,6 @@
+Scenario_Name,Description,Affected_Features,SmogNet_RMSE,SmogNet_R2,SmogNet_MAE,XGB_Imp_RMSE,XGB_Imp_R2,XGB_NaN_RMSE,XGB_NaN_R2,Buffer_vs_Imp,Buffer_vs_NaN,Conformal_Cov_90_pct,Conformal_Cov_95_pct,Conformal_Width_95_ugm3
+Contiguous_3Day_Blackout,Burst telemetry failure: all features missing for 3 consecutive days (two episodes),All 37 Features (6 days total),39.17,0.7982,24.73,40.66,0.7825,45.39,0.729,1.49,6.22,88.7,95.68,145.73
+Contiguous_7Day_Blackout,Severe telemetry loss: all features missing for 7 consecutive days (one complete week),All 37 Features (7 days total),39.79,0.7917,24.99,41.79,0.7703,41.77,0.7705,2.0,1.98,88.37,95.02,145.55
+Spatial_Neighbor_Outage_Gurugram,Complete telemetry loss from upwind Gurugram monitoring station across entire test set,6 Gurugram spatial features,38.87,0.8013,24.34,39.4,0.7958,41.94,0.7686,0.53,3.07,89.04,96.01,145.39
+Meteorology_Station_Power_Failure,Weather sensor array failure: all surface meteorology & inversion proxies missing,8 meteorological features,41.16,0.7771,26.12,44.21,0.7429,66.64,0.4157,3.05,25.48,87.38,93.02,147.13
+Secondary_Pollutant_Analyzer_Failure,"Chemiluminescence analyzer failure: all NO2 telemetry (local, lags, and regional gradients) offline",4 NO2 co-pollutant features,39.4,0.7958,24.83,41.26,0.776,40.08,0.7886,1.86,0.68,88.7,96.01,145.97

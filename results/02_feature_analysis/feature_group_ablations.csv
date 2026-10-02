@@ -1,0 +1,4 @@
+Group,Delta_RMSE,Features,Share_Pct,Description
+Crop-Residue Stubble Burning & Calendar Flags,1.96,5,53.7,"is_stubble_burning, upwind_transport, stubble_x_ws, diwali/lockdown"
+Multi-Day Lags & Autoregressive Rolling Stats,0.91,7,24.9,"pm25_roll3_mean/std, roll7_mean/std, lag2, lag3, lag7"
+Surface Meteorology & Thermal Inversion Proxies,0.78,7,21.4,"wind_speed, wind_dir, humidity, temp, temp_inversion_proxy"

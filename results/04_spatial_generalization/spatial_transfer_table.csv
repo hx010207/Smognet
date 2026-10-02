@@ -1,0 +1,8 @@
+City,Latitude,Longitude,Region,Test_Days,Persistence_RMSE,Frozen_Transfer_RMSE,Frozen_Transfer_R2,Retrained_RMSE,Retrained_R2,Transfer_Status
+Delhi (Benchmark),28.61,77.21,Indo-Gangetic Basin,301,45.59,39.16,0.7983,39.16,0.7983,Reference Site
+Gurugram,28.46,77.03,Indo-Gangetic Basin,336,50.18,45.38,0.5651,41.9,0.6292,Highly Transferable (Shared Airshed)
+Lucknow,26.85,80.95,Indo-Gangetic Basin,402,36.54,37.97,0.5401,32.67,0.6596,Highly Transferable (Basin Dynamics)
+Patna,25.59,85.14,Indo-Gangetic Basin,372,37.89,35.91,0.7276,38.04,0.6942,Exceptional Zero-Shot Transfer
+Hyderabad,17.38,78.49,Deccan Plateau,401,11.18,17.62,0.2013,11.76,0.6432,Domain Shift; Retraining Succeeds
+Bengaluru,12.97,77.59,Southern Plateau,372,11.4,16.16,-0.5284,10.39,0.3697,Distribution Shift (Tropical Elevation)
+Chennai,13.08,80.27,Coastal Bay of Bengal,363,19.54,21.04,-0.0784,18.07,0.1983,Maritime Marine Boundary Shift

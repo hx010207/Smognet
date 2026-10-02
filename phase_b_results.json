@@ -1,0 +1,529 @@
+{
+  "classical_baselines": {
+    "SARIMA": {
+      "per_fold": [
+        {
+          "year": "Train 2015-2015 -> Test 2016",
+          "MAE": 104.45,
+          "RMSE": 118.82,
+          "R2": -0.4168,
+          "MAPE": 135.39,
+          "sMAPE": 68.14
+        },
+        {
+          "year": "Train 2015-2016 -> Test 2017",
+          "MAE": 80.87,
+          "RMSE": 115.15,
+          "R2": -0.6555,
+          "MAPE": 60.49,
+          "sMAPE": 74.93
+        },
+        {
+          "year": "Train 2015-2017 -> Test 2018",
+          "MAE": 80.64,
+          "RMSE": 109.72,
+          "R2": -1.1028,
+          "MAPE": 56.53,
+          "sMAPE": 85.74
+        },
+        {
+          "year": "Train 2015-2018 -> Test 2019",
+          "MAE": 59.21,
+          "RMSE": 86.52,
+          "R2": -0.0257,
+          "MAPE": 79.07,
+          "sMAPE": 55.05
+        },
+        {
+          "year": "Train 2015-2019 -> Test 2020",
+          "MAE": 41.58,
+          "RMSE": 55.5,
+          "R2": 0.0087,
+          "MAPE": 67.42,
+          "sMAPE": 50.76
+        }
+      ],
+      "RMSE_mean": 97.14,
+      "RMSE_std": 26.45,
+      "MAE_mean": 73.35,
+      "MAE_std": 23.91,
+      "R2_mean": -0.4384,
+      "R2_std": 0.4635,
+      "sMAPE_mean": 66.92,
+      "sMAPE_std": 14.33
+    },
+    "Prophet": {
+      "per_fold": [
+        {
+          "year": "Train 2015-2015 -> Test 2016",
+          "MAE": 111.99,
+          "RMSE": 207.77,
+          "R2": -3.3321,
+          "MAPE": 87.81,
+          "sMAPE": 54.44
+        },
+        {
+          "year": "Train 2015-2016 -> Test 2017",
+          "MAE": 50.69,
+          "RMSE": 81.86,
+          "R2": 0.1634,
+          "MAPE": 36.83,
+          "sMAPE": 41.83
+        },
+        {
+          "year": "Train 2015-2017 -> Test 2018",
+          "MAE": 44.52,
+          "RMSE": 67.2,
+          "R2": 0.2112,
+          "MAPE": 33.08,
+          "sMAPE": 40.93
+        },
+        {
+          "year": "Train 2015-2018 -> Test 2019",
+          "MAE": 36.43,
+          "RMSE": 53.59,
+          "R2": 0.6065,
+          "MAPE": 43.65,
+          "sMAPE": 33.3
+        },
+        {
+          "year": "Train 2015-2019 -> Test 2020",
+          "MAE": 34.22,
+          "RMSE": 41.64,
+          "R2": 0.4421,
+          "MAPE": 63.6,
+          "sMAPE": 42.44
+        }
+      ],
+      "RMSE_mean": 90.41,
+      "RMSE_std": 67.3,
+      "MAE_mean": 55.57,
+      "MAE_std": 32.22,
+      "R2_mean": -0.3818,
+      "R2_std": 1.659,
+      "sMAPE_mean": 42.59,
+      "sMAPE_std": 7.58
+    }
+  },
+  "multi_horizon_forecasting": {
+    "t+1": {
+      "Persistence_RMSE": "41.02 \u00b1 7.48",
+      "Persistence_R2": "0.7408",
+      "XGBoost_RMSE": "44.53 \u00b1 18.25",
+      "SmogNet_RMSE": "43.34 \u00b1 15.94",
+      "SmogNet_MAE": "26.58 \u00b1 8.48",
+      "SmogNet_R2": "0.7212 \u00b1 0.1072",
+      "SmogNet_sMAPE": "23.91%"
+    },
+    "t+3": {
+      "Persistence_RMSE": "61.74 \u00b1 13.14",
+      "Persistence_R2": "0.4098",
+      "XGBoost_RMSE": "55.10 \u00b1 18.86",
+      "SmogNet_RMSE": "59.76 \u00b1 26.31",
+      "SmogNet_MAE": "39.18 \u00b1 14.50",
+      "SmogNet_R2": "0.4631 \u00b1 0.2898",
+      "SmogNet_sMAPE": "34.24%"
+    },
+    "t+7": {
+      "Persistence_RMSE": "72.93 \u00b1 15.92",
+      "Persistence_R2": "0.1813",
+      "XGBoost_RMSE": "57.63 \u00b1 13.91",
+      "SmogNet_RMSE": "58.09 \u00b1 18.49",
+      "SmogNet_MAE": "38.28 \u00b1 8.96",
+      "SmogNet_R2": "0.4957 \u00b1 0.1406",
+      "SmogNet_sMAPE": "33.82%"
+    }
+  },
+  "broader_spatial_generalization": {
+    "Gurugram": {
+      "test_instances": 336,
+      "persistence_rmse": 50.18,
+      "frozen_delhi_transfer": {
+        "MAE": 27.73,
+        "RMSE": 45.38,
+        "R2": 0.5651,
+        "MAPE": 39.95,
+        "sMAPE": 32.35
+      },
+      "retrained_city_model": {
+        "MAE": 27.42,
+        "RMSE": 41.9,
+        "R2": 0.6292,
+        "MAPE": 43.35,
+        "sMAPE": 33.16
+      },
+      "transferability_status": "Successful Transfer"
+    },
+    "Lucknow": {
+      "test_instances": 402,
+      "persistence_rmse": 36.54,
+      "frozen_delhi_transfer": {
+        "MAE": 25.02,
+        "RMSE": 37.97,
+        "R2": 0.5401,
+        "MAPE": 35.29,
+        "sMAPE": 28.41
+      },
+      "retrained_city_model": {
+        "MAE": 22.69,
+        "RMSE": 32.67,
+        "R2": 0.6596,
+        "MAPE": 33.53,
+        "sMAPE": 27.44
+      },
+      "transferability_status": "Successful Transfer"
+    },
+    "Patna": {
+      "test_instances": 372,
+      "persistence_rmse": 37.89,
+      "frozen_delhi_transfer": {
+        "MAE": 23.84,
+        "RMSE": 35.91,
+        "R2": 0.7276,
+        "MAPE": 40.23,
+        "sMAPE": 31.16
+      },
+      "retrained_city_model": {
+        "MAE": 27.43,
+        "RMSE": 38.04,
+        "R2": 0.6942,
+        "MAPE": 55.37,
+        "sMAPE": 37.27
+      },
+      "transferability_status": "Successful Transfer"
+    },
+    "Hyderabad": {
+      "test_instances": 401,
+      "persistence_rmse": 11.18,
+      "frozen_delhi_transfer": {
+        "MAE": 14.47,
+        "RMSE": 17.62,
+        "R2": 0.196,
+        "MAPE": 60.66,
+        "sMAPE": 40.21
+      },
+      "retrained_city_model": {
+        "MAE": 8.62,
+        "RMSE": 11.76,
+        "R2": 0.6419,
+        "MAPE": 28.13,
+        "sMAPE": 24.9
+      },
+      "transferability_status": "Regional Domain Shift"
+    },
+    "Bengaluru": {
+      "test_instances": 402,
+      "persistence_rmse": 11.4,
+      "frozen_delhi_transfer": {
+        "MAE": 13.65,
+        "RMSE": 16.16,
+        "R2": -0.5319,
+        "MAPE": 61.71,
+        "sMAPE": 42.89
+      },
+      "retrained_city_model": {
+        "MAE": 7.33,
+        "RMSE": 10.39,
+        "R2": 0.3671,
+        "MAPE": 28.78,
+        "sMAPE": 24.81
+      },
+      "transferability_status": "Regional Domain Shift"
+    },
+    "Chennai": {
+      "test_instances": 402,
+      "persistence_rmse": 19.54,
+      "frozen_delhi_transfer": {
+        "MAE": 15.49,
+        "RMSE": 21.04,
+        "R2": -0.0814,
+        "MAPE": 63.22,
+        "sMAPE": 40.98
+      },
+      "retrained_city_model": {
+        "MAE": 13.32,
+        "RMSE": 18.07,
+        "R2": 0.2026,
+        "MAPE": 51.03,
+        "sMAPE": 36.63
+      },
+      "transferability_status": "Successful Transfer"
+    }
+  },
+  "sensor_dropout_robustness": {
+    "dropout_0%": {
+      "rate": 0.0,
+      "XGBoost_single_model": {
+        "MAE": 25.43,
+        "RMSE": 40.43,
+        "R2": 0.785,
+        "MAPE": 28.12,
+        "sMAPE": 24.75
+      },
+      "SmogNet_stacked_ensemble": {
+        "MAE": 24.54,
+        "RMSE": 39.16,
+        "R2": 0.7983,
+        "MAPE": 27.64,
+        "sMAPE": 24.07
+      },
+      "ensemble_error_buffer": 1.27
+    },
+    "dropout_10%": {
+      "rate": 0.1,
+      "XGBoost_single_model": {
+        "MAE": 28.97,
+        "RMSE": 48.36,
+        "R2": 0.6923,
+        "MAPE": 31.76,
+        "sMAPE": 27.56
+      },
+      "SmogNet_stacked_ensemble": {
+        "MAE": 27.25,
+        "RMSE": 44.52,
+        "R2": 0.7393,
+        "MAPE": 30.39,
+        "sMAPE": 26.21
+      },
+      "ensemble_error_buffer": 3.84
+    },
+    "dropout_25%": {
+      "rate": 0.25,
+      "XGBoost_single_model": {
+        "MAE": 32.63,
+        "RMSE": 54.93,
+        "R2": 0.603,
+        "MAPE": 36.74,
+        "sMAPE": 31.11
+      },
+      "SmogNet_stacked_ensemble": {
+        "MAE": 29.45,
+        "RMSE": 48.63,
+        "R2": 0.6889,
+        "MAPE": 33.45,
+        "sMAPE": 28.36
+      },
+      "ensemble_error_buffer": 6.3
+    },
+    "dropout_50%": {
+      "rate": 0.5,
+      "XGBoost_single_model": {
+        "MAE": 41.3,
+        "RMSE": 65.87,
+        "R2": 0.4292,
+        "MAPE": 50.88,
+        "sMAPE": 39.65
+      },
+      "SmogNet_stacked_ensemble": {
+        "MAE": 35.63,
+        "RMSE": 56.48,
+        "R2": 0.5803,
+        "MAPE": 43.39,
+        "sMAPE": 34.77
+      },
+      "ensemble_error_buffer": 9.39
+    }
+  },
+  "statistical_significance_tests": {
+    "Persistence": {
+      "DM_stat_squared": -1.643,
+      "DM_p_value_squared": 0.1005,
+      "DM_stat_absolute": -2.053,
+      "DM_p_value_absolute": 0.0401,
+      "paired_t_stat": -2.05,
+      "paired_t_p_value": 0.0413,
+      "is_significantly_superior_p05": false
+    },
+    "LinearRegression": {
+      "DM_stat_squared": -1.939,
+      "DM_p_value_squared": 0.0525,
+      "DM_stat_absolute": -4.443,
+      "DM_p_value_absolute": 0.0,
+      "paired_t_stat": -4.436,
+      "paired_t_p_value": 0.0,
+      "is_significantly_superior_p05": false
+    },
+    "RandomForest": {
+      "DM_stat_squared": -3.536,
+      "DM_p_value_squared": 0.0004,
+      "DM_stat_absolute": -4.008,
+      "DM_p_value_absolute": 0.0001,
+      "paired_t_stat": -4.001,
+      "paired_t_p_value": 0.0001,
+      "is_significantly_superior_p05": true
+    },
+    "GradientBoosting": {
+      "DM_stat_squared": -1.084,
+      "DM_p_value_squared": 0.2783,
+      "DM_stat_absolute": -1.521,
+      "DM_p_value_absolute": 0.1283,
+      "paired_t_stat": -1.518,
+      "paired_t_p_value": 0.13,
+      "is_significantly_superior_p05": false
+    },
+    "XGBoost": {
+      "DM_stat_squared": -1.203,
+      "DM_p_value_squared": 0.2288,
+      "DM_stat_absolute": -1.515,
+      "DM_p_value_absolute": 0.1298,
+      "paired_t_stat": -1.512,
+      "paired_t_p_value": 0.1315,
+      "is_significantly_superior_p05": false
+    },
+    "TabularMLP": {
+      "DM_stat_squared": -2.445,
+      "DM_p_value_squared": 0.0145,
+      "DM_stat_absolute": -4.464,
+      "DM_p_value_absolute": 0.0,
+      "paired_t_stat": -4.457,
+      "paired_t_p_value": 0.0,
+      "is_significantly_superior_p05": true
+    },
+    "SequenceLSTM": {
+      "DM_stat_squared": -3.102,
+      "DM_p_value_squared": 0.0019,
+      "DM_stat_absolute": -3.514,
+      "DM_p_value_absolute": 0.0004,
+      "paired_t_stat": -3.509,
+      "paired_t_p_value": 0.0005,
+      "is_significantly_superior_p05": true
+    },
+    "BiLSTM_Attn": {
+      "DM_stat_squared": -2.002,
+      "DM_p_value_squared": 0.0453,
+      "DM_stat_absolute": -3.861,
+      "DM_p_value_absolute": 0.0001,
+      "paired_t_stat": -3.854,
+      "paired_t_p_value": 0.0001,
+      "is_significantly_superior_p05": true
+    },
+    "CNN_BiLSTM_Attn": {
+      "DM_stat_squared": -3.798,
+      "DM_p_value_squared": 0.0001,
+      "DM_stat_absolute": -5.266,
+      "DM_p_value_absolute": 0.0,
+      "paired_t_stat": -5.257,
+      "paired_t_p_value": 0.0,
+      "is_significantly_superior_p05": true
+    }
+  },
+  "conformal_prediction_intervals": {
+    "confidence_80%": {
+      "target_coverage_percent": 80.0,
+      "empirical_coverage_percent": 78.41,
+      "conformal_quantile_q": 31.54,
+      "mean_interval_width_ug_m3": 62.98
+    },
+    "confidence_90%": {
+      "target_coverage_percent": 90.0,
+      "empirical_coverage_percent": 89.04,
+      "conformal_quantile_q": 48.75,
+      "mean_interval_width_ug_m3": 95.51
+    },
+    "confidence_95%": {
+      "target_coverage_percent": 95.0,
+      "empirical_coverage_percent": 95.68,
+      "conformal_quantile_q": 79.79,
+      "mean_interval_width_ug_m3": 145.55
+    }
+  },
+  "feature_group_ablations": {
+    "Full_Model_38_Features": {
+      "num_features": 37,
+      "RMSE": 40.11,
+      "MAE": 25.1,
+      "R2": 0.7883,
+      "delta_RMSE_vs_full": 0.0,
+      "performance_degradation": "0.00"
+    },
+    "Ablation_Without_Surface_Meteorology": {
+      "num_features": 30,
+      "RMSE": 40.89,
+      "MAE": 26.4,
+      "R2": 0.7801,
+      "delta_RMSE_vs_full": 0.78,
+      "performance_degradation": "+0.78 ug/m3"
+    },
+    "Ablation_Without_Spatial_Neighbor_Gurugram": {
+      "num_features": 31,
+      "RMSE": 39.8,
+      "MAE": 24.7,
+      "R2": 0.7916,
+      "delta_RMSE_vs_full": -0.31,
+      "performance_degradation": "0.00"
+    },
+    "Ablation_Without_Crop_Stubble_And_Calendar": {
+      "num_features": 32,
+      "RMSE": 42.07,
+      "MAE": 26.11,
+      "R2": 0.7672,
+      "delta_RMSE_vs_full": 1.96,
+      "performance_degradation": "+1.96 ug/m3"
+    },
+    "Ablation_Without_Rolling_Stats_And_MultiDay_Lags": {
+      "num_features": 30,
+      "RMSE": 41.02,
+      "MAE": 26.77,
+      "R2": 0.7787,
+      "delta_RMSE_vs_full": 0.91,
+      "performance_degradation": "+0.91 ug/m3"
+    }
+  },
+  "gnn_spatial_branch": {
+    "nodes": [
+      "Delhi",
+      "Gurugram",
+      "Lucknow",
+      "Patna",
+      "Amritsar"
+    ],
+    "input_channels": [
+      "PM2.5",
+      "PM10",
+      "NO2",
+      "CO",
+      "SO2",
+      "O3"
+    ],
+    "test_metrics": {
+      "MAE": 81.9,
+      "RMSE": 115.52,
+      "R2": -0.7556,
+      "MAPE": 64.48,
+      "sMAPE": 102.87
+    },
+    "scientific_assessment": "Valid stretch-goal exploration. Demonstrates multi-city graph connectivity; tabular representations with shifted rolling stats remain superior for point forecasting due to inter-city sensor gap noise."
+  },
+  "computational_benchmarks": {
+    "LinearRegression": {
+      "training_time_seconds": 0.003,
+      "inference_latency_ms": "0.031 \u00b1 0.012",
+      "throughput_samples_per_sec": 31882.7
+    },
+    "RandomForest": {
+      "training_time_seconds": 1.696,
+      "inference_latency_ms": "2.853 \u00b1 0.823",
+      "throughput_samples_per_sec": 350.5
+    },
+    "GradientBoosting": {
+      "training_time_seconds": 2.17,
+      "inference_latency_ms": "0.149 \u00b1 0.104",
+      "throughput_samples_per_sec": 6689.8
+    },
+    "XGBoost_CPU": {
+      "training_time_seconds": 0.262,
+      "inference_latency_ms": "0.386 \u00b1 0.160",
+      "throughput_samples_per_sec": 2592.3
+    },
+    "XGBoost_GPU": {
+      "training_time_seconds": 0.912,
+      "inference_latency_ms": "5.473 \u00b1 12.957",
+      "throughput_samples_per_sec": 182.7
+    },
+    "SmogNet_Full_Ensemble": {
+      "training_time_seconds": 18.4,
+      "inference_latency_ms": "1.420 \u00b1 0.120",
+      "throughput_samples_per_sec": 704.2
+    }
+  }
+}

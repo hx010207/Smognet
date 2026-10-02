@@ -1,0 +1,9 @@
+Model,Train_Time_Sec,Inference_Latency_ms,Throughput_Samples_Sec,Device
+LinearRegression,0.08,0.04,25000,CPU
+RandomForest,1.25,0.85,1176,CPU (16 cores)
+GradientBoosting,0.95,0.42,2380,CPU (16 cores)
+XGBoost (CPU),0.65,0.45,2222,CPU (16 cores)
+XGBoost (GPU),0.18,0.28,3571,CUDA (NVIDIA GPU)
+BiLSTM + Attention,14.5,4.1,244,CUDA (NVIDIA GPU)
+TabularMLP,8.2,1.1,909,CUDA (NVIDIA GPU)
+Smog Net (Full Stack),24.8,1.42,704,Hybrid (CPU + GPU)

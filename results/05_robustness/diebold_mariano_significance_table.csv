@@ -1,0 +1,9 @@
+Model,DM_stat_sq,DM_pval_sq,Paired_t,Paired_tpval,Superior
+RandomForest,-3.536,0.0004,-4.001,0.0001,p < 0.001 ***
+CNN-BiLSTM-Attn,-3.798,0.0001,-5.257,0.0001,p < 0.001 ***
+SequenceLSTM,-3.102,0.0019,-3.509,0.0005,p < 0.01 ***
+TabularMLP,-2.445,0.0145,-4.457,0.0001,p < 0.05 **
+BiLSTM-Attn,-2.002,0.0453,-3.854,0.0001,p < 0.05 **
+LinearRegression,-1.939,0.0525,-4.436,0.0001,p < 0.05 (t-test)
+Persistence,-1.643,0.1005,-2.05,0.0413,p < 0.05 (t-test)
+Tuned XGBoost,-1.203,0.2288,-1.512,0.1315,Equivalent Mean

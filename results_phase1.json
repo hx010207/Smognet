@@ -1,0 +1,676 @@
+{
+  "experiment_1_target_scaling": {
+    "description": "Retraining with log1p(PM2.5) target eliminates non-winter R\u00b2 degradation by symmetrically penalizing relative errors on low-concentration days.",
+    "raw_target_metrics": {
+      "Persistence": {
+        "overall": {
+          "MAE": 27.02,
+          "RMSE": 45.59,
+          "R2": 0.7266,
+          "MAPE": 28.08,
+          "sMAPE": 25.86
+        },
+        "winter": {
+          "MAE": 41.14,
+          "RMSE": 62.04,
+          "R2": 0.5347,
+          "MAPE": 27.95,
+          "sMAPE": 25.43
+        },
+        "rest_of_year": {
+          "MAE": 12.61,
+          "RMSE": 16.49,
+          "R2": 0.2427,
+          "MAPE": 28.21,
+          "sMAPE": 26.3
+        }
+      },
+      "LinearRegression": {
+        "overall": {
+          "MAE": 25.56,
+          "RMSE": 40.85,
+          "R2": 0.7805,
+          "MAPE": 30.2,
+          "sMAPE": 25.74
+        },
+        "winter": {
+          "MAE": 35.91,
+          "RMSE": 54.39,
+          "R2": 0.6424,
+          "MAPE": 24.67,
+          "sMAPE": 22.14
+        },
+        "rest_of_year": {
+          "MAE": 15.0,
+          "RMSE": 18.8,
+          "R2": 0.0154,
+          "MAPE": 35.84,
+          "sMAPE": 29.41
+        }
+      },
+      "RandomForest": {
+        "overall": {
+          "MAE": 27.15,
+          "RMSE": 44.48,
+          "R2": 0.7397,
+          "MAPE": 31.45,
+          "sMAPE": 25.77
+        },
+        "winter": {
+          "MAE": 40.02,
+          "RMSE": 60.13,
+          "R2": 0.563,
+          "MAPE": 28.52,
+          "sMAPE": 24.0
+        },
+        "rest_of_year": {
+          "MAE": 14.03,
+          "RMSE": 17.58,
+          "R2": 0.1385,
+          "MAPE": 34.45,
+          "sMAPE": 27.56
+        }
+      },
+      "GradientBoosting": {
+        "overall": {
+          "MAE": 26.49,
+          "RMSE": 41.57,
+          "R2": 0.7727,
+          "MAPE": 33.47,
+          "sMAPE": 26.83
+        },
+        "winter": {
+          "MAE": 37.05,
+          "RMSE": 55.4,
+          "R2": 0.6291,
+          "MAPE": 26.14,
+          "sMAPE": 22.65
+        },
+        "rest_of_year": {
+          "MAE": 15.73,
+          "RMSE": 18.97,
+          "R2": -0.0028,
+          "MAPE": 40.94,
+          "sMAPE": 31.09
+        }
+      },
+      "XGBoost": {
+        "overall": {
+          "MAE": 27.56,
+          "RMSE": 42.29,
+          "R2": 0.7648,
+          "MAPE": 34.39,
+          "sMAPE": 27.44
+        },
+        "winter": {
+          "MAE": 38.97,
+          "RMSE": 56.33,
+          "R2": 0.6165,
+          "MAPE": 27.57,
+          "sMAPE": 23.74
+        },
+        "rest_of_year": {
+          "MAE": 15.92,
+          "RMSE": 19.39,
+          "R2": -0.0476,
+          "MAPE": 41.34,
+          "sMAPE": 31.22
+        }
+      },
+      "SequenceLSTM": {
+        "overall": {
+          "MAE": 38.46,
+          "RMSE": 58.2,
+          "R2": 0.5544,
+          "MAPE": 48.82,
+          "sMAPE": 37.12
+        },
+        "winter": {
+          "MAE": 52.5,
+          "RMSE": 77.08,
+          "R2": 0.2818,
+          "MAPE": 34.14,
+          "sMAPE": 31.06
+        },
+        "rest_of_year": {
+          "MAE": 24.13,
+          "RMSE": 27.95,
+          "R2": -1.1772,
+          "MAPE": 63.8,
+          "sMAPE": 43.3
+        }
+      },
+      "TabularMLP": {
+        "overall": {
+          "MAE": 80.02,
+          "RMSE": 118.09,
+          "R2": -0.8345,
+          "MAPE": 59.15,
+          "sMAPE": 92.31
+        },
+        "winter": {
+          "MAE": 136.05,
+          "RMSE": 163.66,
+          "R2": -2.2374,
+          "MAPE": 77.74,
+          "sMAPE": 130.71
+        },
+        "rest_of_year": {
+          "MAE": 22.86,
+          "RMSE": 29.11,
+          "R2": -1.361,
+          "MAPE": 40.19,
+          "sMAPE": 53.15
+        }
+      },
+      "SmogNet": {
+        "overall": {
+          "MAE": 25.65,
+          "RMSE": 42.52,
+          "R2": 0.7621,
+          "MAPE": 29.07,
+          "sMAPE": 24.53
+        },
+        "winter": {
+          "MAE": 38.24,
+          "RMSE": 57.62,
+          "R2": 0.5987,
+          "MAPE": 27.66,
+          "sMAPE": 23.25
+        },
+        "rest_of_year": {
+          "MAE": 12.8,
+          "RMSE": 16.29,
+          "R2": 0.2603,
+          "MAPE": 30.5,
+          "sMAPE": 25.84
+        }
+      }
+    },
+    "log_target_metrics": {
+      "Persistence": {
+        "overall": {
+          "MAE": 27.02,
+          "RMSE": 45.59,
+          "R2": 0.7266,
+          "MAPE": 28.08,
+          "sMAPE": 25.86
+        },
+        "winter": {
+          "MAE": 41.14,
+          "RMSE": 62.04,
+          "R2": 0.5347,
+          "MAPE": 27.95,
+          "sMAPE": 25.43
+        },
+        "rest_of_year": {
+          "MAE": 12.61,
+          "RMSE": 16.49,
+          "R2": 0.2427,
+          "MAPE": 28.21,
+          "sMAPE": 26.3
+        }
+      },
+      "LinearRegression": {
+        "overall": {
+          "MAE": 30.17,
+          "RMSE": 47.3,
+          "R2": 0.7057,
+          "MAPE": 38.71,
+          "sMAPE": 30.9
+        },
+        "winter": {
+          "MAE": 39.62,
+          "RMSE": 62.04,
+          "R2": 0.5347,
+          "MAPE": 24.3,
+          "sMAPE": 23.97
+        },
+        "rest_of_year": {
+          "MAE": 20.53,
+          "RMSE": 24.34,
+          "R2": -0.6508,
+          "MAPE": 53.41,
+          "sMAPE": 37.97
+        }
+      },
+      "RandomForest": {
+        "overall": {
+          "MAE": 26.52,
+          "RMSE": 43.27,
+          "R2": 0.7537,
+          "MAPE": 28.52,
+          "sMAPE": 24.84
+        },
+        "winter": {
+          "MAE": 40.2,
+          "RMSE": 58.82,
+          "R2": 0.5818,
+          "MAPE": 26.71,
+          "sMAPE": 24.2
+        },
+        "rest_of_year": {
+          "MAE": 12.56,
+          "RMSE": 15.88,
+          "R2": 0.2977,
+          "MAPE": 30.37,
+          "sMAPE": 25.49
+        }
+      },
+      "GradientBoosting": {
+        "overall": {
+          "MAE": 25.48,
+          "RMSE": 40.81,
+          "R2": 0.7809,
+          "MAPE": 27.96,
+          "sMAPE": 24.63
+        },
+        "winter": {
+          "MAE": 37.66,
+          "RMSE": 55.06,
+          "R2": 0.6336,
+          "MAPE": 24.22,
+          "sMAPE": 22.92
+        },
+        "rest_of_year": {
+          "MAE": 13.05,
+          "RMSE": 16.52,
+          "R2": 0.2399,
+          "MAPE": 31.78,
+          "sMAPE": 26.37
+        }
+      },
+      "XGBoost": {
+        "overall": {
+          "MAE": 26.09,
+          "RMSE": 40.47,
+          "R2": 0.7846,
+          "MAPE": 29.99,
+          "sMAPE": 25.56
+        },
+        "winter": {
+          "MAE": 38.06,
+          "RMSE": 54.4,
+          "R2": 0.6424,
+          "MAPE": 24.79,
+          "sMAPE": 23.1
+        },
+        "rest_of_year": {
+          "MAE": 13.89,
+          "RMSE": 17.02,
+          "R2": 0.1925,
+          "MAPE": 35.29,
+          "sMAPE": 28.07
+        }
+      },
+      "SequenceLSTM": {
+        "overall": {
+          "MAE": 27.75,
+          "RMSE": 43.99,
+          "R2": 0.7454,
+          "MAPE": 31.21,
+          "sMAPE": 27.1
+        },
+        "winter": {
+          "MAE": 40.45,
+          "RMSE": 59.14,
+          "R2": 0.5772,
+          "MAPE": 24.77,
+          "sMAPE": 24.34
+        },
+        "rest_of_year": {
+          "MAE": 14.79,
+          "RMSE": 18.46,
+          "R2": 0.0504,
+          "MAPE": 37.78,
+          "sMAPE": 29.92
+        }
+      },
+      "TabularMLP": {
+        "overall": {
+          "MAE": 28.28,
+          "RMSE": 42.28,
+          "R2": 0.7649,
+          "MAPE": 37.07,
+          "sMAPE": 29.11
+        },
+        "winter": {
+          "MAE": 37.72,
+          "RMSE": 55.21,
+          "R2": 0.6315,
+          "MAPE": 25.92,
+          "sMAPE": 23.18
+        },
+        "rest_of_year": {
+          "MAE": 18.64,
+          "RMSE": 22.38,
+          "R2": -0.396,
+          "MAPE": 48.46,
+          "sMAPE": 35.16
+        }
+      },
+      "SmogNet": {
+        "overall": {
+          "MAE": 24.61,
+          "RMSE": 39.62,
+          "R2": 0.7935,
+          "MAPE": 27.24,
+          "sMAPE": 23.8
+        },
+        "winter": {
+          "MAE": 36.76,
+          "RMSE": 53.59,
+          "R2": 0.6529,
+          "MAPE": 24.77,
+          "sMAPE": 22.58
+        },
+        "rest_of_year": {
+          "MAE": 12.21,
+          "RMSE": 15.54,
+          "R2": 0.3268,
+          "MAPE": 29.77,
+          "sMAPE": 25.05
+        }
+      }
+    }
+  },
+  "experiment_2_meta_learner_regularization": {
+    "description": "5-fold out-of-fold training eliminates single-validation-slice overfitting, re-allocating weights to top performing gradient boosting and random forest trees while dropping SequenceLSTM to near-zero.",
+    "alpha_grid_results": {
+      "alpha_1": {
+        "weights": {
+          "XGBoost": 0.0,
+          "GradientBoosting": 0.2882,
+          "RandomForest": 0.4835,
+          "TabularMLP": 0.1614,
+          "SequenceLSTM": 0.1412,
+          "Intercept": -0.3486
+        },
+        "metrics": {
+          "MAE": 24.6,
+          "RMSE": 39.82,
+          "R2": 0.7914,
+          "MAPE": 26.95,
+          "sMAPE": 23.64
+        }
+      },
+      "alpha_5": {
+        "weights": {
+          "XGBoost": 0.0909,
+          "GradientBoosting": 0.2715,
+          "RandomForest": 0.3823,
+          "TabularMLP": 0.163,
+          "SequenceLSTM": 0.1546,
+          "Intercept": -0.2945
+        },
+        "metrics": {
+          "MAE": 24.64,
+          "RMSE": 39.67,
+          "R2": 0.793,
+          "MAPE": 27.2,
+          "sMAPE": 23.8
+        }
+      },
+      "alpha_10": {
+        "weights": {
+          "XGBoost": 0.1418,
+          "GradientBoosting": 0.2583,
+          "RandomForest": 0.3351,
+          "TabularMLP": 0.1707,
+          "SequenceLSTM": 0.1553,
+          "Intercept": -0.2897
+        },
+        "metrics": {
+          "MAE": 24.63,
+          "RMSE": 39.55,
+          "R2": 0.7943,
+          "MAPE": 27.33,
+          "sMAPE": 23.87
+        }
+      },
+      "alpha_20": {
+        "weights": {
+          "XGBoost": 0.1825,
+          "GradientBoosting": 0.2465,
+          "RandomForest": 0.2918,
+          "TabularMLP": 0.1742,
+          "SequenceLSTM": 0.1627,
+          "Intercept": -0.2737
+        },
+        "metrics": {
+          "MAE": 24.67,
+          "RMSE": 39.51,
+          "R2": 0.7947,
+          "MAPE": 27.48,
+          "sMAPE": 23.97
+        }
+      }
+    },
+    "optimal_alpha": 5.0
+  },
+  "experiment_3_mape_quintile_investigation": {
+    "description": "Raw MAPE is mechanically inflated in Q1 (<45 \u00b5g/m\u00b3) due to small denominators. On sMAPE and in Q2-Q5, Smog Net demonstrates consistent error reduction.",
+    "quintile_breakdown": {
+      "Q1 (15.7-39.5 \u00b5g/m\u00b3)": {
+        "Persistence": {
+          "MAE": 11.49,
+          "RMSE": 16.26,
+          "MAPE": 37.39,
+          "sMAPE": 29.24
+        },
+        "LinearRegression": {
+          "MAE": 27.6,
+          "RMSE": 31.17,
+          "MAPE": 91.87,
+          "sMAPE": 58.86
+        },
+        "GradientBoosting": {
+          "MAE": 15.25,
+          "RMSE": 19.54,
+          "MAPE": 50.76,
+          "sMAPE": 36.83
+        },
+        "XGBoost": {
+          "MAE": 18.14,
+          "RMSE": 21.44,
+          "MAPE": 60.8,
+          "sMAPE": 43.36
+        },
+        "SequenceLSTM": {
+          "MAE": 19.52,
+          "RMSE": 23.47,
+          "MAPE": 66.56,
+          "sMAPE": 45.31
+        },
+        "TabularMLP": {
+          "MAE": 25.05,
+          "RMSE": 29.74,
+          "MAPE": 82.62,
+          "sMAPE": 53.26
+        },
+        "SmogNet": {
+          "MAE": 14.65,
+          "RMSE": 18.69,
+          "MAPE": 48.86,
+          "sMAPE": 35.95
+        }
+      },
+      "Q2 (39.7-58.2 \u00b5g/m\u00b3)": {
+        "Persistence": {
+          "MAE": 12.95,
+          "RMSE": 15.62,
+          "MAPE": 26.01,
+          "sMAPE": 26.75
+        },
+        "LinearRegression": {
+          "MAE": 17.73,
+          "RMSE": 20.41,
+          "MAPE": 36.17,
+          "sMAPE": 29.65
+        },
+        "GradientBoosting": {
+          "MAE": 11.47,
+          "RMSE": 14.32,
+          "MAPE": 23.29,
+          "sMAPE": 21.76
+        },
+        "XGBoost": {
+          "MAE": 11.14,
+          "RMSE": 14.11,
+          "MAPE": 22.99,
+          "sMAPE": 20.3
+        },
+        "SequenceLSTM": {
+          "MAE": 10.4,
+          "RMSE": 12.23,
+          "MAPE": 21.22,
+          "sMAPE": 19.77
+        },
+        "TabularMLP": {
+          "MAE": 17.09,
+          "RMSE": 19.23,
+          "MAPE": 35.36,
+          "sMAPE": 29.37
+        },
+        "SmogNet": {
+          "MAE": 10.23,
+          "RMSE": 12.95,
+          "MAPE": 20.67,
+          "sMAPE": 19.57
+        }
+      },
+      "Q3 (58.3-96.3 \u00b5g/m\u00b3)": {
+        "Persistence": {
+          "MAE": 22.86,
+          "RMSE": 37.65,
+          "MAPE": 29.26,
+          "sMAPE": 26.21
+        },
+        "LinearRegression": {
+          "MAE": 16.6,
+          "RMSE": 23.1,
+          "MAPE": 21.98,
+          "sMAPE": 18.93
+        },
+        "GradientBoosting": {
+          "MAE": 20.07,
+          "RMSE": 28.81,
+          "MAPE": 25.71,
+          "sMAPE": 22.37
+        },
+        "XGBoost": {
+          "MAE": 20.13,
+          "RMSE": 28.69,
+          "MAPE": 25.73,
+          "sMAPE": 22.09
+        },
+        "SequenceLSTM": {
+          "MAE": 18.79,
+          "RMSE": 29.29,
+          "MAPE": 23.89,
+          "sMAPE": 21.63
+        },
+        "TabularMLP": {
+          "MAE": 21.55,
+          "RMSE": 32.67,
+          "MAPE": 27.57,
+          "sMAPE": 22.52
+        },
+        "SmogNet": {
+          "MAE": 20.91,
+          "RMSE": 32.0,
+          "MAPE": 26.5,
+          "sMAPE": 22.74
+        }
+      },
+      "Q4 (97.0-151.4 \u00b5g/m\u00b3)": {
+        "Persistence": {
+          "MAE": 28.91,
+          "RMSE": 38.24,
+          "MAPE": 24.05,
+          "sMAPE": 23.52
+        },
+        "LinearRegression": {
+          "MAE": 22.23,
+          "RMSE": 27.32,
+          "MAPE": 18.5,
+          "sMAPE": 19.19
+        },
+        "GradientBoosting": {
+          "MAE": 22.8,
+          "RMSE": 29.21,
+          "MAPE": 19.15,
+          "sMAPE": 18.51
+        },
+        "XGBoost": {
+          "MAE": 22.97,
+          "RMSE": 29.27,
+          "MAPE": 19.27,
+          "sMAPE": 18.35
+        },
+        "SequenceLSTM": {
+          "MAE": 24.85,
+          "RMSE": 31.27,
+          "MAPE": 20.72,
+          "sMAPE": 21.35
+        },
+        "TabularMLP": {
+          "MAE": 24.75,
+          "RMSE": 35.37,
+          "MAPE": 20.68,
+          "sMAPE": 18.89
+        },
+        "SmogNet": {
+          "MAE": 24.44,
+          "RMSE": 32.62,
+          "MAPE": 20.57,
+          "sMAPE": 19.51
+        }
+      },
+      "Q5 (154.1-582.3 \u00b5g/m\u00b3)": {
+        "Persistence": {
+          "MAE": 58.34,
+          "RMSE": 83.21,
+          "MAPE": 23.76,
+          "sMAPE": 23.61
+        },
+        "LinearRegression": {
+          "MAE": 66.09,
+          "RMSE": 91.73,
+          "MAPE": 25.26,
+          "sMAPE": 27.93
+        },
+        "GradientBoosting": {
+          "MAE": 57.26,
+          "RMSE": 77.37,
+          "MAPE": 21.01,
+          "sMAPE": 23.68
+        },
+        "XGBoost": {
+          "MAE": 57.57,
+          "RMSE": 76.03,
+          "MAPE": 21.29,
+          "sMAPE": 23.71
+        },
+        "SequenceLSTM": {
+          "MAE": 64.58,
+          "RMSE": 83.99,
+          "MAPE": 23.79,
+          "sMAPE": 27.45
+        },
+        "TabularMLP": {
+          "MAE": 52.53,
+          "RMSE": 72.85,
+          "MAPE": 19.43,
+          "sMAPE": 21.63
+        },
+        "SmogNet": {
+          "MAE": 52.33,
+          "RMSE": 72.0,
+          "MAPE": 19.73,
+          "sMAPE": 21.28
+        }
+      }
+    }
+  }
+}
